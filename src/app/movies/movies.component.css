@@ -1,0 +1,23 @@
+.title{
+    text-align: center;
+}
+.selected{
+    background: #dc3545;
+}
+
+.show{
+    display: none;
+}
+
+.movies{
+    margin-left: auto;
+    list-style-type: none;
+    text-align: left;
+    padding-right: 2em;
+    background-color: #ffc107;
+}
+
+.movieListItem{
+    cursor: pointer;
+    padding-top: 0.5em;
+}

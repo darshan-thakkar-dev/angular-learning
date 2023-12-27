@@ -1,0 +1,75 @@
+<h1 class="title">Movies</h1>
+
+<div class="col-12 row">
+  <div class="col-3"></div>
+  <div class="bg-warning col-6 p-2">
+    <h6>Dynamic Data Binding</h6>
+    <h6 class="bg-danger">
+      <span> id: </span>
+      {{ movie.id }}
+    </h6>
+
+    <h6 class="bg-danger">
+      <span> name: </span>
+      {{ movie.name | uppercase }}
+    </h6>
+
+    <h6 class="bg-danger">
+      <span> release year: </span>
+      {{ movie.releaseYear }}
+    </h6>
+
+    <form>
+      <div class="row">
+        <label for="releaseYear" class="form-label col-6">Release Year</label>
+        <div class="col-6">
+          <input name="1111" [(ngModel)]="movie.releaseYear" type="email" class="form-control" id="releaseYear"
+            aria-describedby="emailHelp" />
+        </div>
+      </div>
+      <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    </form>
+  </div>
+</div>
+
+<!-- Empty Space -->
+<div class="col-12 row">
+  <p></p>
+</div>
+
+<div class="col-12 row">
+  <div class="col-3"></div>
+  <div class="col-3"></div>
+  <div class="col-2"></div>
+  <div class="col-3">
+    <button class="btn-danger" (click)="onClickShowBtn(show)">
+      {{ showHideButton }}
+    </button>
+  </div>
+</div>
+
+<div class="col-12 row">
+  <p></p>
+</div>
+
+
+<div class="col-12 row" *ngIf="show">
+  <div class="col-3"></div>
+  <div class="col-3">
+    <ul class="movies">
+      <li class="movieListItem" *ngFor="let movie of movies" [class.selected]="movie === selectedMovie"
+        (click)="onSelected(movie)">
+        {{ movie.id }} - {{ movie.name }} - {{ movie.releaseYear }} 
+      </li>
+    </ul>
+  </div>
+
+  <div class="card col-3" style="width: 18rem; height: 12rem;">
+    <div class="card-body">
+      <h5 class="card-title">Movie Details</h5>
+      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+      <p class="card-text bg-warning p-2">{{selectedMovie.name | uppercase}}.</p>
+      <p><span>Movie Id : {{selectedMovie.id}}</span> | Movie Year : {{selectedMovie.releaseYear}}</p>
+    </div>
+  </div>
+</div>
