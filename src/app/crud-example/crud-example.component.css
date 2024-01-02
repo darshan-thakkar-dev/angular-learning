@@ -1,0 +1,18 @@
+.container-fluid{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.movieForm{
+    margin: auto;
+    /* background-color: blanchedalmond; */
+}
+
+.row{
+    margin-top: 0.5rem;
+}
+
+

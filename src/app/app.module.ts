@@ -7,13 +7,15 @@ import { HeaderComponentComponent } from './header-component/header-component.co
 import { MoviesComponent } from './movies/movies.component';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { CrudExampleComponent } from './crud-example/crud-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponentComponent,
     MoviesComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    CrudExampleComponent
   ],
   imports: [
     BrowserModule,

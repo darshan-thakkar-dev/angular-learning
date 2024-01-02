@@ -1,0 +1,84 @@
+<div class="container-fluid">
+    <div class="col-6 center mt-5 bg-success">
+        <h3 class="text-center text-white">Add Movie</h3>
+        <div class="col-12">
+            <p>
+
+            </p>
+        </div>
+        <form class="movieForm">
+            <div class="row">
+                <div class="col-1">
+                </div>
+
+                <label for="movieId" class="form-label col-4">Movie Id</label>
+                <div class="col-6">
+                    <input name="movieId" type="number" class="form-control" id="movieId" placeholder="Movie Id"
+                        [(ngModel)]="movieId" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                </div>
+
+                <label for="movieName" class="form-label col-4">Movie Name </label>
+                <div class="col-6">
+                    <input name="movieName" type="text" class="form-control" id="movieName" placeholder="Movie Name"
+                        [(ngModel)]="movieName" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                </div>
+
+                <label for="releaseYear" class="form-label col-4">Release Year</label>
+                <div class="col-6">
+                    <input name="1111" type="email" class="form-control" id="releaseYear" aria-describedby="emailHelp"
+                        placeholder="Release Year" [(ngModel)]="releaseYear" />
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4">
+                </div>
+                <button class="btn-white rounded border-success text-success col-3"
+                    (click)="onClickSubmit()">Submit</button>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+
+            </div>
+        </form>
+    </div>
+
+    <div class="col-6">
+        <h3>Movie List</h3>
+    </div>
+
+    <app-movie-detail class="col-6" [movies]="movies"></app-movie-detail>
+
+    <!-- <section>
+        <div class="list">
+            <ul>
+                <li *ngFor="let movie of movies">
+                    <div class="row">
+                        <div class="col-6">
+                            {{movie.name}}
+                        </div>
+                        <div class="col-6">
+                            <button id="{{movie.id}}" (click)="onClickDetail(movie, show)"> Show Detail</button>
+                        </div>
+                    </div>
+                </li>
+                <div *ngIf="show" class="card" style="width: 18rem; position: relative;; float: right;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{selectedMovie.id}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{selectedMovie.name}}</h6>
+                    </div>
+                </div>                
+            </ul>
+        </div>
+    </section> -->
+</div>

@@ -1,1 +1,25 @@
-<p>movie-detail works!</p>
+<!-- <section> -->
+    <div class="list">
+        <ul>
+            <!-- <li *ngFor="let movie of movies" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                {{movie.name}} - {{movie.releaseYear}} 
+            </li> -->
+            <li *ngFor="let movie of movies">
+                <div class="row">
+                    <div class="col-6">
+                        {{movie.name}}
+                    </div>
+                    <div class="col-6">
+                        <button id="{{movie.id}}" (click)="onClickDetail(movie, show)"> Show Detail</button>
+                    </div>
+                </div>
+            </li>
+            <div *ngIf="show" class="card" style="width: 18rem; position: relative; float: right;">
+                <div class="card-body">
+                    <h5 class="card-title">{{selectedMovie.id}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{selectedMovie.name}}</h6>
+                </div>
+            </div>                
+        </ul>
+    </div>
+<!-- </section> -->
