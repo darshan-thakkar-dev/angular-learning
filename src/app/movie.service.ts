@@ -10,6 +10,7 @@ export class MovieService {
   constructor() { }
 
   getMovies(): Movie[] {
+    // api call data return
     return fake_movies;
   }
 

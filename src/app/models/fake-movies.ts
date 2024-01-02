@@ -1,6 +1,5 @@
 import { Movie } from "./movie";
 
-
 export var fake_movies : Movie[] = [
         {
           "id": 1,
