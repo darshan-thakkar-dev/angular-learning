@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Movie } from '../models/movie';
+import { fake_movies } from '../models/fake-movies';
 
 @Component({
   selector: 'app-crud-example',
@@ -7,7 +8,7 @@ import { Movie } from '../models/movie';
   styleUrls: ['./crud-example.component.css']
 })
 export class CrudExampleComponent {
-    movies: Movie[] | undefined;
+    movies: Movie[] = fake_movies;
     movieName: string = '';
     movieId : number | undefined;
     releaseYear : number | undefined;
@@ -34,7 +35,9 @@ export class CrudExampleComponent {
     }
 
     onClickDetail(movie: Movie, show: boolean){
+      console.log('clicked')
       this.show = !show;
       this.selectedMovie = movie;
+      // alert('Alert')
     }
 }

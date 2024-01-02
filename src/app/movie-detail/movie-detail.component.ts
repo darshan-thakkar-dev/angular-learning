@@ -21,5 +21,6 @@ export class MovieDetailComponent {
   onClickDetail(movie: Movie, show: boolean){
     this.show = !show;
     this.selectedMovie = movie;
+    alert('Movie Name = '+ this.selectedMovie.name)
   }
 }

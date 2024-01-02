@@ -8,6 +8,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { CrudExampleComponent } from './crud-example/crud-example.component';
+import { MovieService } from './movie.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { CrudExampleComponent } from './crud-example/crud-example.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    MovieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
